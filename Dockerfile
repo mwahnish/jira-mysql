@@ -6,4 +6,5 @@ EXPOSE 3306
 
 COPY my.cnf /etc/mysql/my.cnf
 
-ENTRYPOINT service mysql start
+ENTRYPOINT ["container-entrypoint"]
+CMD ["run-mysqld"]
