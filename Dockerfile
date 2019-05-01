@@ -6,4 +6,4 @@ EXPOSE 3306
 
 COPY my.cnf /etc/mysql/my.cnf
 
-ENTRYPOINT systemctl restart mysqld
+ENTRYPOINT service mysql start
