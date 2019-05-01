@@ -6,4 +6,4 @@ EXPOSE 3306
 
 COPY my.cnf /etc/mysql/my.cnf
 
-RUN systemctl restart mysqld
+RUN sudo systemctl restart mysqld
