@@ -6,4 +6,5 @@ EXPOSE 3306
 
 COPY my.cnf /etc/mysql/my.cnf
 COPY post-init.sh ~/post-init.sh
-CMD ["sh", "~/post-init.sh"]
+ENTRYPOINT ["container-entrypoint"]
+CMD ["sh", "~/post-init.sh && run-mysqld"]
