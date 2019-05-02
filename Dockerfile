@@ -5,5 +5,5 @@ MAINTAINER Mark Wahnish
 EXPOSE 3306
 
 COPY my.cnf /etc/mysql/my.cnf
-COPY post-init.sh /usr/local/bin/
-ENTRYPOINT ["post-init.sh"]
+COPY post-init.sh /post-init.sh
+ENTRYPOINT ["/post-init.sh"]
